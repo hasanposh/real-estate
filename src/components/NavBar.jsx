@@ -1,20 +1,57 @@
-import { Link } from "react-router-dom";
+import { Link, NavLink } from "react-router-dom";
+import { CiUser } from "react-icons/ci";
+import { useContext } from "react";
+import { AuthContext } from "../providers/AuthProvider";
 
 const NavBar = () => {
+  const { user, signOutUser } = useContext(AuthContext);
+  console.log(user);
+  const handleSignOut = () => {
+    signOutUser()
+      .then((request) => {
+        console.log(request.user);
+      })
+      .catch((error) => {
+        console.log(error);
+      });
+  };
   const navLinks = (
     <>
       <li>
-        <Link to={"/"}>Home</Link>
+        <NavLink
+          className={({ isActive }) => (isActive ? "text-green-700" : "")}
+          to={"/"}
+        >
+          Home
+        </NavLink>
       </li>
       <li>
-        <Link to={"/login"}>Login</Link>
+        <NavLink
+          className={({ isActive }) => (isActive ? "text-green-700" : "")}
+          to={"/login"}
+        >
+          Login
+        </NavLink>
       </li>
+      <li>
+        <NavLink
+          className={({ isActive }) => (isActive ? "text-green-700" : "")}
+          to={"/updateProfile"}
+        >
+          Update Profile
+        </NavLink>
+      </li>
+      {user && (
+        <li>
+          <button onClick={handleSignOut}>Log Out</button>
+        </li>
+      )}
     </>
   );
 
   return (
     <div>
-      <div className="navbar bg-black text-white">
+      <div className="navbar bg-black px-10 text-white">
         <div className="navbar-start">
           <div className="dropdown">
             <div tabIndex={0} role="button" className="btn btn-ghost lg:hidden">
@@ -35,18 +72,48 @@ const NavBar = () => {
             </div>
             <ul
               tabIndex={0}
-              className="menu menu-sm dropdown-content mt-3 z-[1] p-2 shadow bg-base-100 rounded-box w-52"
+              className="menu menu-sm dropdown-content text-black mt-3 z-[1] p-2 shadow bg-base-100 rounded-box w-52"
             >
               {navLinks}
             </ul>
           </div>
-          <Link to={"/"} className="btn btn-ghost font-bold text-4xl">Sedona <span className="text-green-700">Realty</span></Link>
-        </div>
-        <div className="navbar-center hidden lg:flex">
-          <ul className="menu menu-horizontal px-1">{navLinks}</ul>
+          <Link to={"/"} className=" font-extrabold text-2xl lg:text-4xl">
+            Sedona<span className="text-green-700 font-bold ">.</span>{" "}
+            <span className="text-green-700">Realty</span>
+          </Link>
+          <div className="border-l-2 hidden lg:flex border-white ml-3 pl-3">
+            Unique Places to Stay
+          </div>
         </div>
         <div className="navbar-end">
-          <a className="btn">Button</a>
+          <div className=" hidden lg:flex">
+            <ul className="menu-horizontal gap-3">{navLinks}</ul>
+          </div>
+          {user ? (
+            <div className="btn btn-ghost btn-circle ">
+              <Link
+                to={"/updateProfile"}
+                data-tip={user.email}
+                className=" tooltip tooltip-bottom "
+              >
+                <img
+                  className="rounded-full"
+                  alt="Tailwind CSS Navbar component"
+                  src="https://daisyui.com/images/stock/photo-1534528741775-53994a69daeb.jpg"
+                />
+              </Link>
+            </div>
+          ) : (
+            <div className="btn btn-ghost border-white text-2xl btn-circle">
+              <Link
+                to={"/login"}
+                data-tip="Login"
+                className="flex tooltip tooltip-bottom items-center justify-center"
+              >
+                <CiUser />
+              </Link>
+            </div>
+          )}
         </div>
       </div>
     </div>
@@ -54,74 +121,3 @@ const NavBar = () => {
 };
 
 export default NavBar;
-<div className="navbar bg-base-100">
-  <div className="navbar-start">
-    <div className="dropdown">
-      <div tabIndex={0} role="button" className="btn btn-ghost lg:hidden">
-        <svg
-          xmlns="http://www.w3.org/2000/svg"
-          className="h-5 w-5"
-          fill="none"
-          viewBox="0 0 24 24"
-          stroke="currentColor"
-        >
-          <path
-            strokeLinecap="round"
-            strokeLinejoin="round"
-            strokeWidth="2"
-            d="M4 6h16M4 12h8m-8 6h16"
-          />
-        </svg>
-      </div>
-      <ul
-        tabIndex={0}
-        className="menu menu-sm dropdown-content mt-3 z-[1] p-2 shadow bg-base-100 rounded-box w-52"
-      >
-        <li>
-          <a>Item 1</a>
-        </li>
-        <li>
-          <a>Parent</a>
-          <ul className="p-2">
-            <li>
-              <a>Submenu 1</a>
-            </li>
-            <li>
-              <a>Submenu 2</a>
-            </li>
-          </ul>
-        </li>
-        <li>
-          <a>Item 3</a>
-        </li>
-      </ul>
-    </div>
-    <a className="btn btn-ghost text-xl">daisyUI</a>
-  </div>
-  <div className="navbar-center hidden lg:flex">
-    <ul className="menu menu-horizontal px-1">
-      <li>
-        <a>Item 1</a>
-      </li>
-      <li>
-        <details>
-          <summary>Parent</summary>
-          <ul className="p-2">
-            <li>
-              <a>Submenu 1</a>
-            </li>
-            <li>
-              <a>Submenu 2</a>
-            </li>
-          </ul>
-        </details>
-      </li>
-      <li>
-        <a>Item 3</a>
-      </li>
-    </ul>
-  </div>
-  <div className="navbar-end">
-    <a className="btn">Button</a>
-  </div>
-</div>;

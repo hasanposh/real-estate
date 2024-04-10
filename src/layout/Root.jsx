@@ -1,11 +1,12 @@
 import NavBar from "../components/NavBar";
-import Home from "../pages/Home";
+import { Outlet } from "react-router-dom";
+
 
 const Root = () => {
     return (
         <div className="font-PT_sans">
             <NavBar/>
-            <Home/>
+            <Outlet/>
         </div>
     );
 };
