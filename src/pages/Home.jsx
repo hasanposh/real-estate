@@ -1,22 +1,29 @@
 import Slider from "../components/Slider";
-import bannerImage from "../../public/home banner.jpeg";
+// import bannerImage from "../../public/home banner.jpeg";
+import Marquee from "react-fast-marquee";
+import HomeSlider from "../components/HomeSlider";
+import { useLoaderData } from "react-router-dom";
+import HomeCard from "../components/HomeCard";
 
 const Home = () => {
+  const  data  = useLoaderData();
+  console.log(data)
   return (
-    <div>
-      <div
-        style={{
-          "--image-url": `linear-gradient(45deg,rgba(0,0,0,0.4),rgba(0,0,0,0.1)),url(${bannerImage})`,
-        }}
-        className={`min-h-[calc(100vh-64px)] space-y-3 text-center bg-cover text-white bg-[image:var(--image-url)]`}
-      >
-          <h2 className="text-7xl ">
-            All you need is one click away.
-          </h2>
-        
+    <div className="z-0">
+      <HomeSlider />
+      <div className="container mx-auto">
+      <p className="text-7xl py-10">Check out our featured items</p>
+      <div className="grid grid-cols-1 lg:grid-cols-3 ">
 
-        <Slider />
+      {
+        data.map(item=><HomeCard item={item} key={item.id}/>)
+      }
       </div>
+      </div>
+      <Marquee className="text-5xl">
+        <h2>hello</h2>
+      </Marquee>
+      <Slider />
     </div>
   );
 };

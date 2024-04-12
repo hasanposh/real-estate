@@ -1,6 +1,6 @@
 [
     {
-      "image": "office_building1.jpg",
+      "image": "https://images.pexels.com/photos/287263/pexels-photo-287263.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
       "estate_title": "Corporate Tower in Business District",
       "id": "OB001",
       "segment_name": "Office Building",
@@ -13,7 +13,7 @@
       "view_property_button": "View Property"
     },
     {
-      "image": "office_building2.jpg",
+      "image": "https://images.pexels.com/photos/443383/pexels-photo-443383.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
       "estate_title": "Tech Hub in Innovation Park",
       "id": "OB002",
       "segment_name": "Office Building",
@@ -26,7 +26,7 @@
       "view_property_button": "View Property"
     },
     {
-      "image": "office_building3.jpg",
+      "image": "https://images.pexels.com/photos/269077/pexels-photo-269077.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
       "estate_title": "Executive Offices with Panoramic Views",
       "id": "OB003",
       "segment_name": "Office Building",
@@ -39,7 +39,7 @@
       "view_property_button": "View Property"
     },
     {
-      "image": "retail_space1.jpg",
+      "image": "https://images.pexels.com/photos/1322184/pexels-photo-1322184.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
       "estate_title": "Prime Retail Space in Shopping Mall",
       "id": "RS001",
       "segment_name": "Retail Space",
@@ -52,7 +52,7 @@
       "view_property_button": "View Property"
     },
     {
-      "image": "retail_space2.jpg",
+      "image": "https://images.pexels.com/photos/264507/pexels-photo-264507.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
       "estate_title": "Boutique Storefront in Trendy District",
       "id": "RS002",
       "segment_name": "Retail Space",
@@ -65,7 +65,7 @@
       "view_property_button": "View Property"
     },
     {
-      "image": "retail_space3.jpg",
+      "image": "https://images.pexels.com/photos/2679323/pexels-photo-2679323.jpeg?auto=compress&cs=tinysrgb&w=600",
       "estate_title": "Flagship Store Opportunity on Main Street",
       "id": "RS003",
       "segment_name": "Retail Space",
@@ -78,7 +78,7 @@
       "view_property_button": "View Property"
     },
     {
-      "image": "warehouse1.jpg",
+      "image": "https://images.pexels.com/photos/236705/pexels-photo-236705.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
       "estate_title": "Modern Warehouse Complex",
       "id": "W001",
       "segment_name": "Warehouse",
@@ -91,7 +91,7 @@
       "view_property_button": "View Property"
     },
     {
-      "image": "warehouse2.jpg",
+      "image": "https://images.pexels.com/photos/4483610/pexels-photo-4483610.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
       "estate_title": "Cold Storage Facility",
       "id": "W002",
       "segment_name": "Warehouse",
@@ -104,7 +104,7 @@
       "view_property_button": "View Property"
     },
     {
-      "image": "warehouse3.jpg",
+      "image": "https://images.pexels.com/photos/4481326/pexels-photo-4481326.jpeg?auto=compress&cs=tinysrgb&w=600",
       "estate_title": "Distribution Center with Office Space",
       "id": "W003",
       "segment_name": "Warehouse",

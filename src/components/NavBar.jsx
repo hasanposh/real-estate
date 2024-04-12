@@ -25,25 +25,29 @@ const NavBar = () => {
           Home
         </NavLink>
       </li>
-      <li>
-        <NavLink
-          className={({ isActive }) => (isActive ? "text-green-700" : "")}
-          to={"/login"}
-        >
-          Login
-        </NavLink>
-      </li>
-      <li>
-        <NavLink
-          className={({ isActive }) => (isActive ? "text-green-700" : "")}
-          to={"/updateProfile"}
-        >
-          Update Profile
-        </NavLink>
-      </li>
-      {user && (
+
+      {user ? (
+        <>
+          <li>
+            <NavLink
+              className={({ isActive }) => (isActive ? "text-green-700" : "")}
+              to={"/updateProfile"}
+            >
+              Update Profile
+            </NavLink>
+          </li>
+          <li>
+            <button onClick={handleSignOut}>Log Out</button>
+          </li>
+        </>
+      ) : (
         <li>
-          <button onClick={handleSignOut}>Log Out</button>
+          <NavLink
+            className={({ isActive }) => (isActive ? "text-green-700" : "")}
+            to={"/login"}
+          >
+            Login
+          </NavLink>
         </li>
       )}
     </>
@@ -51,7 +55,7 @@ const NavBar = () => {
 
   return (
     <div>
-      <div className="navbar bg-black px-10 text-white">
+      <div className="navbar z-10 relative bg-black px-10 text-white">
         <div className="navbar-start">
           <div className="dropdown">
             <div tabIndex={0} role="button" className="btn btn-ghost lg:hidden">
@@ -90,7 +94,8 @@ const NavBar = () => {
             <ul className="menu-horizontal gap-3">{navLinks}</ul>
           </div>
           {user ? (
-            <div className="btn btn-ghost btn-circle ">
+            
+            <div className="btn btn-ghost ml-6 btn-circle ">
               <Link
                 to={"/updateProfile"}
                 data-tip={user.email}
@@ -104,7 +109,7 @@ const NavBar = () => {
               </Link>
             </div>
           ) : (
-            <div className="btn btn-ghost border-white text-2xl btn-circle">
+            <div className="btn ml-6 btn-ghost border-white text-2xl btn-circle">
               <Link
                 to={"/login"}
                 data-tip="Login"

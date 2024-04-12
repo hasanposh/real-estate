@@ -10,8 +10,8 @@ const Login = () => {
     e.preventDefault();
     const email = e.target.email.value;
     const password = e.target.password.value;
-    console.log(location);
-    console.log(email, password);
+    // console.log(location);
+    // console.log(email, password);
     signInUser(email, password)
       .then((request) => {
         console.log(request.user);
