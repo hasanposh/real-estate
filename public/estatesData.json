@@ -1,6 +1,7 @@
-[
+
+  [
     {
-      "image": "https://images.pexels.com/photos/287263/pexels-photo-287263.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
+      "images": ["https://images.pexels.com/photos/260931/pexels-photo-260931.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1", "https://images.pexels.com/photos/936722/pexels-photo-936722.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"],
       "estate_title": "Corporate Tower in Business District",
       "id": "OB001",
       "segment_name": "Office Building",
@@ -9,11 +10,10 @@
       "status": "sale",
       "area": "100,000 sq ft",
       "location": "City Business District",
-      "facilities": ["Conference Rooms", "Cafeteria", "Parking Garage"],
-      "view_property_button": "View Property"
+      "facilities": ["Conference Rooms", "Cafeteria", "Parking Garage"]
     },
     {
-      "image": "https://images.pexels.com/photos/443383/pexels-photo-443383.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
+      "images": ["https://images.pexels.com/photos/936722/pexels-photo-936722.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1", "https://images.pexels.com/photos/3646913/pexels-photo-3646913.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"],
       "estate_title": "Tech Hub in Innovation Park",
       "id": "OB002",
       "segment_name": "Office Building",
@@ -22,11 +22,10 @@
       "status": "rent",
       "area": "75,000 sq ft",
       "location": "Innovation Park",
-      "facilities": ["Co-working Spaces", "Gym", "Rooftop Terrace"],
-      "view_property_button": "View Property"
+      "facilities": ["Co-working Spaces", "Gym", "Rooftop Terrace"]
     },
     {
-      "image": "https://images.pexels.com/photos/269077/pexels-photo-269077.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
+      "images": ["https://images.pexels.com/photos/2516539/pexels-photo-2516539.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1", "https://images.pexels.com/photos/358549/pexels-photo-358549.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"],
       "estate_title": "Executive Offices with Panoramic Views",
       "id": "OB003",
       "segment_name": "Office Building",
@@ -35,11 +34,10 @@
       "status": "sale",
       "area": "50,000 sq ft",
       "location": "Central Business District",
-      "facilities": ["Executive Lounge", "Business Center", "Valet Parking"],
-      "view_property_button": "View Property"
+      "facilities": ["Executive Lounge", "Business Center", "Valet Parking"]
     },
     {
-      "image": "https://images.pexels.com/photos/1322184/pexels-photo-1322184.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
+      "images": ["https://images.pexels.com/photos/5490931/pexels-photo-5490931.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1", "https://images.pexels.com/photos/6567728/pexels-photo-6567728.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"],
       "estate_title": "Prime Retail Space in Shopping Mall",
       "id": "RS001",
       "segment_name": "Retail Space",
@@ -48,11 +46,10 @@
       "status": "sale",
       "area": "10,000 sq ft",
       "location": "City Mall",
-      "facilities": ["Storefront", "Storage Room", "Restroom"],
-      "view_property_button": "View Property"
+      "facilities": ["Storefront", "Storage Room", "Restroom"]
     },
     {
-      "image": "https://images.pexels.com/photos/264507/pexels-photo-264507.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
+      "images": ["https://images.pexels.com/photos/5490970/pexels-photo-5490970.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1", "https://images.pexels.com/photos/3839432/pexels-photo-3839432.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"],
       "estate_title": "Boutique Storefront in Trendy District",
       "id": "RS002",
       "segment_name": "Retail Space",
@@ -61,11 +58,10 @@
       "status": "rent",
       "area": "2,000 sq ft",
       "location": "Fashion District",
-      "facilities": ["Display Windows", "Changing Rooms", "Stockroom"],
-      "view_property_button": "View Property"
+      "facilities": ["Display Windows", "Changing Rooms", "Stockroom"]
     },
     {
-      "image": "https://images.pexels.com/photos/2679323/pexels-photo-2679323.jpeg?auto=compress&cs=tinysrgb&w=600",
+      "images": ["https://images.pexels.com/photos/899238/pexels-photo-899238.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1", "https://images.pexels.com/photos/1827234/pexels-photo-1827234.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"],
       "estate_title": "Flagship Store Opportunity on Main Street",
       "id": "RS003",
       "segment_name": "Retail Space",
@@ -74,11 +70,10 @@
       "status": "sale",
       "area": "15,000 sq ft",
       "location": "Main Street",
-      "facilities": ["Showroom", "Kitchenette", "Loading Dock"],
-      "view_property_button": "View Property"
+      "facilities": ["Showroom", "Kitchenette", "Loading Dock"]
     },
     {
-      "image": "https://images.pexels.com/photos/236705/pexels-photo-236705.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
+      "images": ["https://images.pexels.com/photos/264507/pexels-photo-264507.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1", "https://images.pexels.com/photos/1322184/pexels-photo-1322184.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"],
       "estate_title": "Modern Warehouse Complex",
       "id": "W001",
       "segment_name": "Warehouse",
@@ -87,11 +82,10 @@
       "status": "sale",
       "area": "200,000 sq ft",
       "location": "Industrial Zone",
-      "facilities": ["Loading Bays", "Racking Systems", "Security System"],
-      "view_property_button": "View Property"
+      "facilities": ["Loading Bays", "Racking Systems", "Security System"]
     },
     {
-      "image": "https://images.pexels.com/photos/4483610/pexels-photo-4483610.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
+      "images": [ "https://images.pexels.com/photos/236705/pexels-photo-236705.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1", "https://images.pexels.com/photos/2679323/pexels-photo-2679323.jpeg?auto=compress&cs=tinysrgb&w=600"],
       "estate_title": "Cold Storage Facility",
       "id": "W002",
       "segment_name": "Warehouse",
@@ -100,11 +94,10 @@
       "status": "sale",
       "area": "100,000 sq ft",
       "location": "Port Area",
-      "facilities": ["Freezer Rooms", "Climate Control", "Dock Levelers"],
-      "view_property_button": "View Property"
+      "facilities": ["Freezer Rooms", "Climate Control", "Dock Levelers"]
     },
     {
-      "image": "https://images.pexels.com/photos/4481326/pexels-photo-4481326.jpeg?auto=compress&cs=tinysrgb&w=600",
+      "images": ["https://images.pexels.com/photos/4481326/pexels-photo-4481326.jpeg?auto=compress&cs=tinysrgb&w=600", "https://images.pexels.com/photos/4483610/pexels-photo-4483610.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"],
       "estate_title": "Distribution Center with Office Space",
       "id": "W003",
       "segment_name": "Warehouse",
@@ -113,8 +106,7 @@
       "status": "rent",
       "area": "150,000 sq ft",
       "location": "Logistics Hub",
-      "facilities": ["Office Suites", "Cross-Docking Area", "Forklifts"],
-      "view_property_button": "View Property"
+      "facilities": ["Office Suites", "Cross-Docking Area", "Forklifts"]
     }
   ]
   

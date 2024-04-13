@@ -21,8 +21,9 @@ const ROTATION_RANGE = 32.5;
 const HALF_ROTATION_RANGE = 32.5 / 2;
 
 const TiltCard = ({ item }) => {
+    console.log(item.images)
   const {
-    image,
+    images,
     description,
     estate_title,
     segment_name,
@@ -95,7 +96,7 @@ const TiltCard = ({ item }) => {
             </div>
             <img
               className="rounded-t-xl image-full h-60 w-full"
-              src={image}
+              src={images[0]}
               alt=""
             />
           </div>
