@@ -1,6 +1,7 @@
 import { useContext } from "react";
 import { Link, useLocation, useNavigate } from "react-router-dom";
 import { AuthContext } from "../providers/AuthProvider";
+import { toast } from "react-toastify";
 
 const Login = () => {
   const { signInUser } = useContext(AuthContext);
@@ -15,17 +16,23 @@ const Login = () => {
     signInUser(email, password)
       .then((request) => {
         console.log(request.user);
+        toast("Login Successful");
         navigate(location?.state ? location.state : "/");
       })
       .catch((error) => {
         console.log(error);
+        toast("Please Enter a Valid Email & Password");
       });
   };
 
   return (
-    <div className="w-full flex justify-center">
-      <div className="w-full  max-w-md p-8 space-y-3 rounded-xl">
+    <div>
+      <div className="h-48 flex text-white justify-center items-center bg-center bg-cover bg-[url('/headerbanner.jpeg')]">
         <h1 className="text-2xl font-bold text-center">Login</h1>
+      </div>
+      <div  className="w-full flex justify-center">
+
+      <div className="w-full  max-w-md p-8 space-y-3 rounded-xl">
         <form
           onSubmit={handleSignIn}
           noValidate=""
@@ -112,6 +119,7 @@ const Login = () => {
             Sign up
           </Link>
         </p>
+      </div>
       </div>
     </div>
   );

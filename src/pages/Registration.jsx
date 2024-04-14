@@ -1,6 +1,7 @@
 import { useContext } from "react";
 import { Link } from "react-router-dom";
 import { AuthContext } from "../providers/AuthProvider";
+import { toast } from "react-toastify";
 
 const Registration = () => {
   const { createUser } = useContext(AuthContext);
@@ -10,10 +11,26 @@ const Registration = () => {
     const photoURL = e.target.photoURL.value;
     const email = e.target.email.value;
     const password = e.target.password.value;
+
+    const emailValidate = /^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/;
+    const passwordValidate = /^(?=.*[A-Za-z])(?=.*\d)[A-Za-z\d]{8,}$/;
+
+    if (!emailValidate.test(email)) {
+      toast("Invalid email address");
+      return;
+    }
+
+    if (!passwordValidate.test(password)) {
+      toast(
+        "Password must be at least 8 characters and contain at least one letter and one number."
+      );
+      return;
+    }
     console.log(name, photoURL, email, password);
     createUser(email, password)
       .then((request) => {
         console.log(request.user);
+        toast("hoise");
       })
       .catch((error) => {
         console.log(error);
@@ -21,9 +38,13 @@ const Registration = () => {
   };
 
   return (
-    <div className="w-full flex justify-center">
-      <div className="w-full  max-w-md p-8 space-y-3 rounded-xl">
+    <div >
+      <div className="h-48 flex text-white justify-center items-center bg-center bg-cover bg-[url('/banner.jpeg')]">
         <h1 className="text-2xl font-bold text-center">Registration</h1>
+      </div>
+      <div className="w-full flex justify-center">
+
+      <div className="w-full  max-w-md p-8 space-y-3 rounded-xl">
         <form
           onSubmit={handleSignIn}
           noValidate=""
@@ -134,6 +155,7 @@ const Registration = () => {
             Login
           </Link>
         </p>
+      </div>
       </div>
     </div>
   );
