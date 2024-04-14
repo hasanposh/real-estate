@@ -9,7 +9,7 @@ const Root = () => {
         <div className="font-PT_sans">
             <NavBar/>
             <Outlet/>
-            <Footer/>
+             <Footer/>
         </div>
     );
 };

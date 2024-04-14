@@ -1,6 +1,5 @@
-import { Link, useLoaderData, useParams } from "react-router-dom";
+import { Link, useLoaderData, useParams ,ScrollRestoration } from "react-router-dom";
 import { Helmet } from "react-helmet-async";
-
 import { MapContainer, TileLayer, Marker, Popup } from "react-leaflet";
 import "leaflet/dist/leaflet.css";
 
@@ -50,7 +49,7 @@ const CardDetails = () => {
       <Helmet>
         <title>Sedona Realty | Details</title>
       </Helmet>
-      <div className=" mt-12 absolute flex flex-col gap-4 lg:flex-row-reverse p-4 inset-4 rounded-xl">
+      <div className=" flex flex-col gap-4 lg:flex-row-reverse p-4 inset-4 rounded-xl">
         <div className="relative flex-1 lg:w-2/4">
           <div className="bg-red-600 text-white font-bold text-center w-20 z-10 top-0 right-0 absolute">
             <p>{status}</p>
@@ -121,6 +120,7 @@ const CardDetails = () => {
           </Link>
         </div>
       </div>
+      <ScrollRestoration />
     </>
   );
 };

@@ -7,6 +7,7 @@ import Registration from "../pages/Registration";
 import UpdateProfile from "../pages/UpdateProfile";
 import CardDetails from "../components/CardDetails";
 import MapLocation from "../components/MapLocation";
+import PrivateRoutes from "./PrivateRoutes";
 
 const router = createBrowserRouter([
   {
@@ -33,7 +34,12 @@ const router = createBrowserRouter([
       },
       {
         path: "/cardDetails/:id",
-        element: <CardDetails />,
+        element: (
+          <PrivateRoutes>
+            <CardDetails />
+          </PrivateRoutes>
+        ),
+
         loader: () => fetch("/estatesData.json"),
       },
       {
