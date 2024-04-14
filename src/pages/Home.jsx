@@ -24,6 +24,7 @@ const Home = () => {
         <h2>hello</h2>
       </Marquee>
       <Slider />
+     
     </div>
   );
 };
