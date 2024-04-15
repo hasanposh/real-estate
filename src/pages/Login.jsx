@@ -4,7 +4,7 @@ import { AuthContext } from "../providers/AuthProvider";
 import { toast } from "react-toastify";
 
 const Login = () => {
-  const { signInUser } = useContext(AuthContext);
+  const { signInUser,signInWithGoogle } = useContext(AuthContext);
   const location = useLocation();
   const navigate = useNavigate();
   const handleSignIn = (e) => {
@@ -80,7 +80,7 @@ const Login = () => {
           <div className="flex-1 h-px sm:w-16 dark:bg-gray-300"></div>
         </div>
         <div className="flex justify-center space-x-4">
-          <button aria-label="Log in with Google" className="p-3 rounded-sm">
+          <button onClick={signInWithGoogle} aria-label="Log in with Google" className="p-3 rounded-sm">
             <svg
               xmlns="http://www.w3.org/2000/svg"
               viewBox="0 0 32 32"
