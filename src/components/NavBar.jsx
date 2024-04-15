@@ -5,7 +5,7 @@ import { AuthContext } from "../providers/AuthProvider";
 
 const NavBar = () => {
   const { user, signOutUser } = useContext(AuthContext);
-  console.log(user);
+  // console.log(user);
   const handleSignOut = () => {
     signOutUser()
       .then((request) => {
@@ -95,16 +95,16 @@ const NavBar = () => {
           </div>
           {user ? (
             
-            <div className="btn btn-ghost ml-6 btn-circle ">
+            <div className="ml-6 btn-circle ">
               <Link
                 to={"/updateProfile"}
-                data-tip={user.email}
+                data-tip={user.displayName}
                 className=" tooltip tooltip-bottom "
               >
                 <img
-                  className="rounded-full"
+                  className="rounded-full w-full"
                   alt="Tailwind CSS Navbar component"
-                  src="https://daisyui.com/images/stock/photo-1534528741775-53994a69daeb.jpg"
+                  src= {user.photoURL}
                 />
               </Link>
             </div>

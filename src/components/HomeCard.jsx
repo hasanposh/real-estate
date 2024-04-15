@@ -21,7 +21,7 @@ const ROTATION_RANGE = 32.5;
 const HALF_ROTATION_RANGE = 32.5 / 2;
 
 const TiltCard = ({ item }) => {
-    console.log(item.images)
+    // console.log(item.images)
   const {
     images,
     description,
