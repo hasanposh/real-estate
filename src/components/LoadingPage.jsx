@@ -1,3 +1,5 @@
+import PropTypes from "prop-types";
+
 const LoadingPage = () => {
   return (
     <div>
@@ -40,6 +42,12 @@ const CutoutTextLoader = ({ height, background, imgUrl }) => {
       </span>
     </div>
   );
+};
+
+CutoutTextLoader.propTypes = {
+  imgUrl: PropTypes.any,
+  background: PropTypes.any,
+  height: PropTypes.any,
 };
 
 export default LoadingPage;

@@ -2,6 +2,7 @@ import { AnimatePresence, motion } from "framer-motion";
 import { useContext } from "react";
 import { FiAlertCircle } from "react-icons/fi";
 import { AuthContext } from "../providers/AuthProvider";
+import PropTypes from "prop-types";
 
 const ModalEditProfile = ({ isOpen, setIsOpen }) => {
   const { updateUserProfile, setLoading } = useContext(AuthContext);
@@ -99,6 +100,11 @@ const ModalEditProfile = ({ isOpen, setIsOpen }) => {
       )}
     </AnimatePresence>
   );
+};
+
+ModalEditProfile.propTypes = {
+  isOpen: PropTypes.func,
+  setIsOpen: PropTypes.func,
 };
 
 export default ModalEditProfile;

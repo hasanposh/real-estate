@@ -9,6 +9,7 @@ import {
   signOut,
   updateProfile,
   GoogleAuthProvider,
+  GithubAuthProvider 
 } from "firebase/auth";
 import PropTypes from "prop-types";
 
@@ -17,6 +18,7 @@ export const AuthContext = createContext(null);
 const auth = getAuth(app);
 
 const googleProvider = new GoogleAuthProvider();
+const GitHubProvider = new GithubAuthProvider ();
 
 const AuthProvider = ({ children }) => {
   const [user, setUser] = useState(null);
@@ -42,6 +44,10 @@ const AuthProvider = ({ children }) => {
   const signInWithGoogle = () => {
     setLoading(true);
     signInWithPopup(auth, googleProvider);
+  };
+  const signInWithGitHub = () => {
+    setLoading(true);
+    signInWithPopup(auth, GitHubProvider);
   };
 
   const signOutUser = () => {
@@ -70,6 +76,7 @@ const AuthProvider = ({ children }) => {
     setLoading,
     setUser,
     signInWithGoogle,
+    signInWithGitHub
   };
   return (
     <div>
