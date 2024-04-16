@@ -6,7 +6,6 @@ import Login from "../pages/Login";
 import Registration from "../pages/Registration";
 import UpdateProfile from "../pages/UpdateProfile";
 import CardDetails from "../components/CardDetails";
-import MapLocation from "../components/MapLocation";
 import PrivateRoutes from "./PrivateRoutes";
 
 const router = createBrowserRouter([
@@ -46,11 +45,7 @@ const router = createBrowserRouter([
 
         loader: () => fetch("/estatesData.json"),
       },
-      {
-        path: "/mapLocation",
-        element: <MapLocation />,
-        // loader: () => fetch("/estatesData.json"),
-      },
+      
     ],
   },
 ]);

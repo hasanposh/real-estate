@@ -21,7 +21,7 @@ const Slider = () => {
       data-aos-once="false"
       data-aos-anchor-placement="top-center"
     >
-       <p className= "container mx-auto text-7xl py-10">Our services </p>
+       <p className= "lg:container mx-auto text-4xl lg:text-6xl p-4 lg:py-10">Our services </p>
       <Swiper
         autoplay={true}
         loop={true}

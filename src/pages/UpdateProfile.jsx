@@ -2,15 +2,18 @@ import { useContext } from "react";
 import { AuthContext } from "../providers/AuthProvider";
 import { useState } from "react";
 import ModalEditProfile from "../components/ModalEditProfile";
+import { Helmet } from "react-helmet-async";
 
 const UpdateProfile = () => {
   const user = useContext(AuthContext);
   const [isOpen, setIsOpen] = useState(false);
   //   console.log(user)
-  
 
   return (
     <div>
+      <Helmet>
+        <title>Sedona Realty | Update Profile</title>
+      </Helmet>
       <div className="h-48 flex text-white justify-center items-center bg-center bg-cover bg-[url('/headerbanner.jpeg')]">
         <h1 className="text-2xl font-bold text-center">Update Your Profile</h1>
       </div>
@@ -67,14 +70,13 @@ const UpdateProfile = () => {
         <div className="bg-white min-h-[200px] flex items-center justify-center">
           <button
             // onClick={handleProfileEdit}
-			onClick={() => setIsOpen(true)}
+            onClick={() => setIsOpen(true)}
             className="px-6 py-2 font-medium bg-green-700 text-white w-fit transition-all shadow-[3px_3px_0px_black] hover:shadow-none hover:translate-x-[3px] hover:translate-y-[3px]"
           >
             Edit Your Profile
           </button>
           <ModalEditProfile isOpen={isOpen} setIsOpen={setIsOpen} />
         </div>
-        
       </div>
     </div>
   );

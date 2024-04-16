@@ -3,6 +3,7 @@ import { Link } from "react-router-dom";
 import { AuthContext } from "../providers/AuthProvider";
 import { toast } from "react-toastify";
 import { updateProfile } from "firebase/auth";
+import { Helmet } from "react-helmet-async";
 
 const Registration = () => {
   const { createUser } = useContext(AuthContext);
@@ -46,9 +47,13 @@ const Registration = () => {
 
   return (
     <div>
+      <Helmet>
+        <title>Sedona Realty | Registration</title>
+      </Helmet>
       <div className="h-48 flex text-white justify-center items-center bg-center bg-cover bg-[url('/banner.jpeg')]">
         <h1 className="text-2xl font-bold text-center">Registration</h1>
       </div>
+      
       <div className="w-full flex justify-center">
         <div className="w-full  max-w-md p-8 space-y-3 rounded-xl">
           <form

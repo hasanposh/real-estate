@@ -1,4 +1,9 @@
-import { Link, useLoaderData, useParams ,ScrollRestoration } from "react-router-dom";
+import {
+  Link,
+  useLoaderData,
+  useParams,
+  ScrollRestoration,
+} from "react-router-dom";
 import { Helmet } from "react-helmet-async";
 import { MapContainer, TileLayer, Marker, Popup } from "react-leaflet";
 import "leaflet/dist/leaflet.css";
@@ -49,7 +54,7 @@ const CardDetails = () => {
       <Helmet>
         <title>Sedona Realty | Details</title>
       </Helmet>
-      <div  className=" flex flex-col gap-4 lg:flex-row-reverse p-4 inset-4 rounded-xl">
+      <div className=" flex flex-col gap-4 lg:flex-row-reverse p-4 inset-4 rounded-xl">
         <div className="relative flex-1 lg:w-2/4">
           <div className="bg-red-600 text-white font-bold text-center w-20 z-10 top-0 right-0 absolute">
             <p>{status}</p>
@@ -110,14 +115,6 @@ const CardDetails = () => {
               </Marker>
             </MapContainer>
           </div>
-          <Link
-            position={position}
-            popup_text={popup_text}
-            to={`/mapLocation`}
-            className=" px-6 py-2 font-medium bg-green-700 text-white w-fit transition-all shadow-[3px_3px_0px_black] hover:shadow-none hover:translate-x-[3px] hover:translate-y-[3px]"
-          >
-            See Location
-          </Link>
         </div>
       </div>
       <ScrollRestoration />

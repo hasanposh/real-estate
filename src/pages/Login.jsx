@@ -4,6 +4,7 @@ import { AuthContext } from "../providers/AuthProvider";
 import { toast } from "react-toastify";
 import { FaEye } from "react-icons/fa";
 import { FaEyeSlash } from "react-icons/fa";
+import { Helmet } from "react-helmet-async";
 
 const Login = () => {
   const { signInUser, signInWithGoogle, signInWithGitHub } =
@@ -23,7 +24,7 @@ const Login = () => {
         console.log(request.user);
         toast("Login Successful");
         navigate(location?.state ? location.state : "/");
-        console.log(location)
+        console.log(location);
       })
       .catch((error) => {
         console.log(error);
@@ -33,6 +34,9 @@ const Login = () => {
 
   return (
     <div>
+      <Helmet>
+        <title>Sedona Realty | Login</title>
+      </Helmet>
       <div className="h-48 flex text-white justify-center items-center bg-center bg-cover bg-[url('/headerbanner.jpeg')]">
         <h1 className="text-2xl font-bold text-center">Login</h1>
       </div>
