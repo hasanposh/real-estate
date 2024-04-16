@@ -49,7 +49,7 @@ const CardDetails = () => {
       <Helmet>
         <title>Sedona Realty | Details</title>
       </Helmet>
-      <div className=" flex flex-col gap-4 lg:flex-row-reverse p-4 inset-4 rounded-xl">
+      <div  className=" flex flex-col gap-4 lg:flex-row-reverse p-4 inset-4 rounded-xl">
         <div className="relative flex-1 lg:w-2/4">
           <div className="bg-red-600 text-white font-bold text-center w-20 z-10 top-0 right-0 absolute">
             <p>{status}</p>

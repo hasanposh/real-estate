@@ -21,7 +21,6 @@ const ROTATION_RANGE = 32.5;
 const HALF_ROTATION_RANGE = 32.5 / 2;
 
 const TiltCard = ({ item }) => {
-    // console.log(item.images)
   const {
     images,
     description,
@@ -30,7 +29,6 @@ const TiltCard = ({ item }) => {
     status,
     id,
     location,
-    
   } = item;
   // console.log(item.segment_name)
   const ref = useRef(null);
@@ -127,11 +125,11 @@ const TiltCard = ({ item }) => {
           </div>
         </div>
         <Link
-        to={`/cardDetails/${id}`}
+          to={`/cardDetails/${id}`}
           style={{
             transform: "translateZ(50px)",
           }}
-          className="px-6 py-2 font-medium bg-indigo-500 text-white w-fit transition-all shadow-[3px_3px_0px_black] hover:shadow-none hover:translate-x-[3px] hover:translate-y-[3px]"
+          className="px-6 py-2 font-medium bg-green-700 text-white w-fit transition-all shadow-[3px_3px_0px_black] hover:shadow-none hover:translate-x-[3px] hover:translate-y-[3px]"
         >
           See Details
         </Link>

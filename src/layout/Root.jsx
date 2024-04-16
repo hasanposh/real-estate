@@ -5,6 +5,7 @@ import Footer from "../components/Footer";
 const Root = () => {
   return (
     <div className="font-PT_sans">
+      
       <NavBar />
       <Outlet />
       <Footer />

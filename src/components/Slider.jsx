@@ -14,7 +14,14 @@ import { RxArrowTopRight } from "react-icons/rx";
 
 const Slider = () => {
   return (
-    <div>
+    <div
+      data-aos="fade-up"
+      data-aos-duration="1000"
+      data-aos-easing="ease-in-out"
+      data-aos-once="false"
+      data-aos-anchor-placement="top-center"
+    >
+       <p className= "container mx-auto text-7xl py-10">Our services </p>
       <Swiper
         autoplay={true}
         loop={true}

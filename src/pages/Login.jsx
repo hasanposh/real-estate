@@ -23,6 +23,7 @@ const Login = () => {
         console.log(request.user);
         toast("Login Successful");
         navigate(location?.state ? location.state : "/");
+        console.log(location)
       })
       .catch((error) => {
         console.log(error);
