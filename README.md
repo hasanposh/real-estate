@@ -12,11 +12,11 @@ Features and characteristics of this website:
 - This website has a Blog page where user can get various types of real estate post.
 - Every property have map location.
 - Here are some npm packages name which i used in this project.
-- 1.animate.css
-- 2.aos (Animate On Scroll Library)
-- 3.framer motion
-- 4.react-leaflet
-- 5.react-toastify
-- 6.swiper
-- 7.react-fast-marquee
-- 8.react-helmet-async
+- 1. animate.css
+- 2. aos (Animate On Scroll Library)
+- 3. framer motion
+- 4. react-leaflet
+- 5. react-toastify
+- 6. swiper
+- 7. react-fast-marquee
+- 8. react-helmet-async
