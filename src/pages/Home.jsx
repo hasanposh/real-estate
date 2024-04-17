@@ -70,7 +70,7 @@ const Home = () => {
         <div className="flex-1">
           <img
             className="w-full h-full object-cover"
-            src="/public/banner.jpeg"
+            src="banner.jpeg"
             alt=""
           />
         </div>
