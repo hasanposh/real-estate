@@ -24,7 +24,7 @@ const Login = () => {
         console.log(request.user);
         toast("Login Successful");
         navigate(location?.state ? location.state : "/");
-        console.log(location);
+        // console.log(location);
       })
       .catch((error) => {
         console.log(error);
@@ -32,12 +32,21 @@ const Login = () => {
       });
   };
 
+  const handleGooglelogin = () => {
+    signInWithGoogle();
+    navigate(location?.state ? location.state : "/");
+  };
+  const handleGitHublogin = () => {
+    signInWithGitHub();
+    navigate(location?.state ? location.state : "/");
+  };
+
   return (
     <div>
       <Helmet>
         <title>Sedona Realty | Login</title>
       </Helmet>
-      <div className="h-48 flex text-white justify-center items-center bg-center bg-cover bg-[url('/headerbanner.jpeg')]">
+      <div className="h-48 flex text-white justify-center items-center bg-center bg-cover bg-[linear-gradient(45deg,rgba(0,0,0,0.6),rgba(0,0,0,0.3)),url('/headerbanner.jpeg')]">
         <h1 className="text-2xl font-bold text-center">Login</h1>
       </div>
       <div className="w-full flex justify-center">
@@ -96,7 +105,7 @@ const Login = () => {
           </div>
           <div className="flex justify-center space-x-4">
             <button
-              onClick={signInWithGoogle}
+              onClick={handleGooglelogin}
               aria-label="Log in with Google"
               className="p-3 rounded-sm"
             >
@@ -110,7 +119,7 @@ const Login = () => {
             </button>
 
             <button
-              onClick={signInWithGitHub}
+              onClick={handleGitHublogin}
               aria-label="Log in with GitHub"
               className="p-3 rounded-sm"
             >

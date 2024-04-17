@@ -28,7 +28,7 @@ const HomeSlider = () => {
             style={{
               "--image-url": `linear-gradient(45deg,rgba(0,0,0,0.6),rgba(0,0,0,0.3)),url(${data.backgroundImage})`,
             }}
-            className={`min-h-[calc(100vh-64px)] px-10 flex flex-col justify-center items-center space-y-3 text-center bg-cover text-white bg-[image:var(--image-url)]`}
+            className={`min-h-[calc(100vh-96px)] px-10 flex flex-col justify-center items-center space-y-3 text-center bg-cover text-white bg-[image:var(--image-url)]`}
           >
             <h2 className="lg:text-7xl text-5xl animate__animated animate__fadeInDown">All you need is one click away.</h2>
             <p className="lg:text-xl lg:w-3/4">{data.content}</p>

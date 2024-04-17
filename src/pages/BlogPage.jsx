@@ -20,7 +20,7 @@ const BlogPage = () => {
       <Helmet>
         <title>Sedona Realty | Blog</title>
       </Helmet>
-      <div className="h-48 flex text-white  items-center bg-center bg-cover bg-[url('/headerbanner.jpeg')]">
+      <div className="h-48 flex text-white  items-center bg-center bg-cover  bg-[linear-gradient(45deg,rgba(0,0,0,0.6),rgba(0,0,0,0.3)),url('/headerbanner.jpeg')]">
         <h1 className="container mx-auto text-center text-2xl font-bold ">
           Blog
         </h1>
@@ -41,7 +41,7 @@ const BlogPage = () => {
                   </div>
                 </figure>
                 <div className="lg:p-10 p-4 space-y-3 ">
-                  <div className="flex flex-col lg:flex-row lg:text-xl lg:gap-4">
+                  <div className="flex flex-col md:flex-row md:text-xl md:gap-4">
                     <p>{blog.category}</p> |<p>{blog.author}</p> |
                     <p className="flex gap-2">
                       {" "}

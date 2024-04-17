@@ -1,14 +1,17 @@
 import { useContext, useState } from "react";
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import { AuthContext } from "../providers/AuthProvider";
 import { toast } from "react-toastify";
-import { updateProfile } from "firebase/auth";
+
 import { Helmet } from "react-helmet-async";
 import { FaEye, FaEyeSlash } from "react-icons/fa";
+import { updateProfile } from "firebase/auth";
 
 const Registration = () => {
-  const { createUser } = useContext(AuthContext);
+  const { createUser, signOutUser } = useContext(AuthContext);
   const [showPassword, setShowPassword] = useState(false);
+  // const location = useLocation();
+  const navigate = useNavigate();
   const handleSignIn = (e) => {
     e.preventDefault();
     const name = e.target.name.value;
@@ -35,20 +38,25 @@ const Registration = () => {
       );
       return;
     }
-    console.log(name, photoURL, email, password);
+    // console.log(name, photoURL, email, password);
     createUser(email, password)
       .then((request) => {
         const user = request.user;
         updateProfile(user, { displayName: name, photoURL: photoURL }).then(
           () => {
-            console.log("Display name set successfully");
+            // console.log("Display name set successfully");
           }
         );
-        console.log(request.user);
+        // console.log(request.user);
         toast("Registered Successfully");
+        signOutUser();
+        navigate("/login");
       })
       .catch((error) => {
         console.log(error);
+        // const errorMessage = error.message;
+        const errorCode = error.code;
+        toast(errorCode);
       });
   };
 
@@ -57,7 +65,7 @@ const Registration = () => {
       <Helmet>
         <title>Sedona Realty | Registration</title>
       </Helmet>
-      <div className="h-48 flex text-white justify-center items-center bg-center bg-cover bg-[url('/banner.jpeg')]">
+      <div className="h-48 flex text-white justify-center items-center bg-center bg-cover  bg-[linear-gradient(45deg,rgba(0,0,0,0.6),rgba(0,0,0,0.3)),url('/headerbanner.jpeg')]">
         <h1 className="text-2xl font-bold text-center">Registration</h1>
       </div>
 

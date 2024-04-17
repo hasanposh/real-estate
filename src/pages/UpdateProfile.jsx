@@ -7,15 +7,15 @@ import { Helmet } from "react-helmet-async";
 const UpdateProfile = () => {
   const user = useContext(AuthContext);
   const [isOpen, setIsOpen] = useState(false);
-  //   console.log(user)
+    console.log(user)
 
   return (
     <div>
       <Helmet>
         <title>Sedona Realty | Update Profile</title>
       </Helmet>
-      <div className="h-48 flex text-white justify-center items-center bg-center bg-cover bg-[url('/headerbanner.jpeg')]">
-        <h1 className="text-2xl font-bold text-center">Update Your Profile</h1>
+      <div className="h-48 flex text-white justify-center items-center bg-center bg-cover bg-[linear-gradient(45deg,rgba(0,0,0,0.6),rgba(0,0,0,0.3)),url('/headerbanner.jpeg')]">
+        <h1 className="text-2xl font-bold text-center ">Update Your Profile</h1>
       </div>
       <div className="flex flex-col justify-center items-center my-10">
         <div className="max-w-md p-8 sm:flex sm:space-x-6 dark:bg-gray-50 dark:text-gray-800">
