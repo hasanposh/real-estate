@@ -2,7 +2,7 @@ import Slider from "../components/Slider";
 // import bannerImage from "../../public/home banner.jpeg";
 import Marquee from "react-fast-marquee";
 import HomeSlider from "../components/HomeSlider";
-import { Link, useLoaderData } from "react-router-dom";
+import { Link, ScrollRestoration, useLoaderData } from "react-router-dom";
 import HomeCard from "../components/HomeCard";
 import { useEffect } from "react";
 import AOS from "aos";
@@ -130,6 +130,7 @@ const Home = () => {
           Apartments from Heven
         </h2>
       </Marquee>
+      <ScrollRestoration />
     </div>
   );
 };

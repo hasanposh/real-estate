@@ -127,11 +127,11 @@ const NavBar = () => {
               <Link
                 to={"/login"}
                 // data-tip="Login"
-                data-tooltip-id="my-tooltip"
-                data-tooltip-content="Login"
+                // data-tooltip-id="my-tooltip"
+                // data-tooltip-content="Login"
                 // className="flex items-center justify-center"
               >
-                <Tooltip style={{ fontSize: '15px' }} id="my-tooltip" />
+                {/* <Tooltip style={{ fontSize: '15px' }} id="my-tooltip" /> */}
                 <CiUser />
               </Link>
             </div>
