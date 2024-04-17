@@ -7,6 +7,7 @@ import Registration from "../pages/Registration";
 import UpdateProfile from "../pages/UpdateProfile";
 import CardDetails from "../components/CardDetails";
 import PrivateRoutes from "./PrivateRoutes";
+import BlogPage from "../pages/BlogPage";
 
 const router = createBrowserRouter([
   {
@@ -28,6 +29,15 @@ const router = createBrowserRouter([
         element: <Registration />,
       },
       {
+        path: "/blog",
+        element: (
+          <PrivateRoutes>
+            <BlogPage />
+          </PrivateRoutes>
+        ),
+        loader: () => fetch("/blogs.json"),
+      },
+      {
         path: "/updateProfile",
         element: (
           <PrivateRoutes>
@@ -45,7 +55,6 @@ const router = createBrowserRouter([
 
         loader: () => fetch("/estatesData.json"),
       },
-      
     ],
   },
 ]);

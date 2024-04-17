@@ -25,6 +25,14 @@ const NavBar = () => {
           Home
         </NavLink>
       </li>
+      <li>
+        <NavLink
+          className={({ isActive }) => (isActive ? "text-green-700" : "")}
+          to={"/blog"}
+        >
+          Blog
+        </NavLink>
+      </li>
 
       {user ? (
         <>

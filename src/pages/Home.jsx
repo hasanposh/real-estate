@@ -29,7 +29,7 @@ const Home = () => {
           data-aos-easing="ease-in-out"
           data-aos-once="false"
           data-aos-anchor-placement="top-center"
-          className="grid grid-cols-1 lg:grid-cols-3 "
+          className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 "
         >
           {data.map((item) => (
             <HomeCard item={item} key={item.id} />
@@ -84,7 +84,7 @@ const Home = () => {
         data-aos-easing="ease-in-out"
         data-aos-once="false"
         data-aos-anchor-placement="top-center"
-        className="h-[700px] lg:h-[500px] lg:mt-10 lg:container flex flex-col-reverse lg:flex-row  lg:mx-auto"
+        className="h-[700px] md:h-[1500px] lg:h-[500px] lg:mt-10 lg:container flex flex-col-reverse lg:flex-row  lg:mx-auto"
       >
         <div className="flex-1 lg:z-10 relative">
           <img
@@ -98,8 +98,8 @@ const Home = () => {
             alt=""
           />
         </div>
-        <div className="flex-1 lg:z-0 px-10  flex flex-col lg:p-20 space-y-2 opacity-80">
-          <div className="flex-grow">
+        <div className="flex-1 lg:z-0 px-10 md:justify-center md:items-center flex flex-col  lg:p-20 space-y-2 opacity-80">
+          <div className="lg:flex-grow ">
             <p className=" text-2xl font-bold">{data[0].estate_title}</p>
             <p className="">{data[0].description}</p>
             <div className="flex justify-between">
