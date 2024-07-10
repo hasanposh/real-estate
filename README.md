@@ -1,7 +1,7 @@
 # Sedona Realty
 
 
-- [Live Link](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
+- [Live Link](https://real-estate-with-react.netlify.app/)
 
 Features and characteristics of this website:
 
